@@ -1,0 +1,43 @@
+#user-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#user-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+#user-list li {
+    margin-bottom: 10px;
+}
+
+/* alinha a descricao e o valor numa mesma linha */
+#user-list li .texto {
+    display: flex;
+}
+
+#user-list li .descricao {
+    font-weight: bold;  /* transforma a descricao em negrito */
+    display: block; 
+    margin-right: 20px; /* cria uma margem a direita */
+}
+
+/* Pode ser ultilizada futuramente para estilizar o valor valor*/
+#user-list li .valor {
+    display: block;
+}
+
+
