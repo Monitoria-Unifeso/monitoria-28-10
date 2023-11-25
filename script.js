@@ -1,6 +1,6 @@
 //constante que irá guardar nossos dados de usuários.
 const usuarios = [];
-//carregarUsuariosDoLocalStorage();
+carregarUsuariosDoLocalStorage();
 
 function registrarUsuario() {
     //Pega os valores dos inputs pelos id's que definimos
