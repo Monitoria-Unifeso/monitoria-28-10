@@ -1,6 +1,6 @@
 //constante que irá guardar nossos dados de usuários.
 const usuarios = [];
-
+//carregarUsuariosDoLocalStorage();
 
 function registrarUsuario() {
     //Pega os valores dos inputs pelos id's que definimos
@@ -23,8 +23,23 @@ function registrarUsuario() {
         //chama a funcao que atuliza nossa lista
         atualizarListaUsuarios();
 
+        salvarUsuariosNoLocalStorage()
+
         limparCamposFormularioUsuario();
     }
+}
+
+function salvarUsuariosNoLocalStorage(){
+    localStorage.setItem('dados', JSON.stringify(usuarios))
+}
+
+function carregarUsuariosDoLocalStorage(){
+    let dadosEmString = localStorage.getItem('dados');
+    let dadosEmJson = JSON.parse(dadosEmString);
+    //resumido
+    //let dados = JSON.parse(localStorage.getItem('dados'));
+    usuarios.push(...dadosEmJson);
+    atualizarListaUsuarios();
 }
 
 function limparCamposFormularioUsuario() {
